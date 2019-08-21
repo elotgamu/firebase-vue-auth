@@ -15,7 +15,7 @@
           <router-link to="/dashboard">Dashboard</router-link>
         </li>
         <li v-if="auth">
-          <button class="btn btn-primary logout" @click="logUserOut"></button>
+          <button class="btn btn-primary logout" @click="logUserOut">Log out</button>
         </li>
       </ul>
     </nav>
@@ -27,11 +27,13 @@ export default {
   computed: {
     auth() {
       return this.$store.getters.isAuthenticated;
-    }
+    },
   },
   methods: {
-    logUserOut() {}
-  }
+    logUserOut() {
+      this.$store.dispatch('logout');
+    },
+  },
 };
 </script>
 

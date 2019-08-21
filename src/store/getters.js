@@ -1,8 +1,16 @@
 /**
- * @typedef {import (../store).state} state
- *
- * @return  {object}
+ * @typedef {Object} Getters
+ * @property {function} isAuthenticated
  */
-export default {
+
+/**
+ * @type {Getters}
+ */
+const getters = {
+  /** @typedef {import ('./state').State} State */
+
+  /** @param {State} state */
   isAuthenticated: state => state.tokenId !== null,
 };
+
+export default getters;

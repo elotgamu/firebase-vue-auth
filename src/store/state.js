@@ -1,10 +1,14 @@
 /**
- * @typedef {object}   state
- * @type {state}
- *
+ * @typedef {Object} State
+ * @property {string} tokenId
+ * @property {string} userId
+ * @property {string} userEmail
  */
-export default {
+
+/** @type {State} */
+const state = {
   tokenId: null,
   userId: null,
   userEmail: null,
 };
+export default state;

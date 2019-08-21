@@ -56,20 +56,20 @@
 export default {
   data() {
     return {
-      email: "",
+      email: '',
       age: null,
-      password: "",
-      confirmPassword: "",
-      country: "usa",
+      password: '',
+      confirmPassword: '',
+      country: 'usa',
       hobbyInputs: [],
-      terms: false
+      terms: false,
     };
   },
   methods: {
     onAddHobby() {
       const newHobby = {
         id: Math.random() * Math.random() * 1000,
-        value: ""
+        value: '',
       };
       this.hobbyInputs.push(newHobby);
     },
@@ -84,12 +84,12 @@ export default {
         confirmPassword: this.confirmPassword,
         country: this.country,
         hobbies: this.hobbyInputs.map(hobby => hobby.value),
-        terms: this.terms
+        terms: this.terms,
       };
       console.log(formData);
-      // this.$store.dispatch("sign_up", formData);
-    }
-  }
+      this.$store.dispatch('signup', formData);
+    },
+  },
 };
 </script>
 
