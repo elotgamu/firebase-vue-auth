@@ -124,28 +124,6 @@ const actions = {
       hobbies: userData.hobbies,
       terms: userData.terms
     });
-  },
-  fetchUsers({ state }) {
-    if (!state.tokenId) {
-      return;
-    }
-    firebaseApi
-      .get(`/users.json?auth=${state.tokenId}`)
-      .then(res => {
-        console.log(res);
-        const { data } = res;
-        const users = [];
-
-        // eslint-disable-next-line guard-for-in
-        // eslint-disable-next-line no-restricted-syntax
-        for (const key in data) {
-          const user = data[key];
-          user.id = key;
-          users.push(user);
-        }
-        console.log(users);
-      })
-      .catch(error => console.log(error));
   }
 };
 
