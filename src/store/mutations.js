@@ -13,11 +13,11 @@ const mutations = {
   /**
    * @param {State} state
    */
-  USER_LOGOUT: (state) => {
+  USER_LOGOUT: state => {
     state.tokenId = null;
     state.userId = null;
     state.userEmail = null;
-  },
+  }
 };
 
 export default mutations;

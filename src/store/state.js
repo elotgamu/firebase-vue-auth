@@ -9,6 +9,6 @@
 const state = {
   tokenId: null,
   userId: null,
-  userEmail: null,
+  userEmail: null
 };
 export default state;

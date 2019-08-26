@@ -1,7 +1,9 @@
 <template>
   <div id="welcome">
     <h1>Time to learn something new!</h1>
-    <p>You found the best place to learn - and now you're just one sign in (or sign up) away from it!</p>
+    <p>
+      You found the best place to learn - and now you're just one sign in (or sign up) away from it!
+    </p>
     <div class="home">
       <img class="vue-logo" alt="Vue logo" src="../assets/logo.png" />
     </div>
@@ -61,7 +63,7 @@ p {
 // import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-  name: "home"
+  name: 'home'
   // components: {
   //   HelloWorld,
   // },

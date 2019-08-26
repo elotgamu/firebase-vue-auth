@@ -10,7 +10,7 @@ const getters = {
   /** @typedef {import ('./state').State} State */
 
   /** @param {State} state */
-  isAuthenticated: state => state.tokenId !== null,
+  isAuthenticated: state => state.tokenId !== null
 };
 
 export default getters;

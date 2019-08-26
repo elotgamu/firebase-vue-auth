@@ -62,14 +62,14 @@ export default {
       confirmPassword: '',
       country: 'usa',
       hobbyInputs: [],
-      terms: false,
+      terms: false
     };
   },
   methods: {
     onAddHobby() {
       const newHobby = {
         id: Math.random() * Math.random() * 1000,
-        value: '',
+        value: ''
       };
       this.hobbyInputs.push(newHobby);
     },
@@ -84,12 +84,13 @@ export default {
         confirmPassword: this.confirmPassword,
         country: this.country,
         hobbies: this.hobbyInputs.map(hobby => hobby.value),
-        terms: this.terms,
+        terms: this.terms
       };
-      console.log(formData);
-      this.$store.dispatch('signup', formData);
-    },
-  },
+      this.$store.dispatch('signup', formData).then(() => {
+        this.$router.push('/dashboard');
+      });
+    }
+  }
 };
 </script>
 
